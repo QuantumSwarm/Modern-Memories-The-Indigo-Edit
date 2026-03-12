@@ -190,7 +190,6 @@ function SponsorCard({
       onMouseEnter={() => onHover(sponsor.id)}
       onMouseLeave={() => onHover(null)}
       onMouseMove={(e: React.MouseEvent<HTMLElement>) => handleMouseMove(e, mouseX)}
-
       whileHover={{ 
         scale: 1.05,
         transition: { type: 'spring', stiffness: 300 }
