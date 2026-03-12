@@ -165,7 +165,10 @@ export default function SponsorsPage() {
     </main>
   )
 }
-
+// ===== Sponsor Card Component =====
+// ===== Sponsor Card Component =====
+// ===== Sponsor Card Component =====
+// ===== Sponsor Card Component =====
 // ===== Sponsor Card Component =====
 function SponsorCard({ 
   sponsor, 
