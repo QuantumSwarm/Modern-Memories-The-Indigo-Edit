@@ -1,9 +1,10 @@
 'use client'
 // test
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { MotionValue, motion, useMotionValue, useTransform} from 'framer-motion'
 import { useState, useMemo, useEffect } from 'react'
 import Navbar from '@/components/sections/Navbar'
 import Image from 'next/image'
+
 
 interface Sponsor {
   id: string
@@ -270,8 +271,20 @@ function SponsorCard({
 }
 
 // ✅ AFTER (accepts any HTMLElement)
-function handleMouseMove(e: React.MouseEvent<HTMLElement>, mouseX: ReturnType<typeof useMotionValue>) {
-  const rect = e.currentTarget.getBoundingClientRect()
-  const x = e.clientX - rect.left
-  mouseX.set((x - rect.width / 2) / 20)
+//function handleMouseMove(e: React.MouseEvent<HTMLElement>, mouseX: ReturnType<typeof useMotionValue>) {
+//  const rect = e.currentTarget.getBoundingClientRect()
+//  const x = e.clientX - rect.left
+//  mouseX.set((x - rect.width / 2) / 20)
+//}
+
+
+
+// Change this line:
+function handleMouseMove(
+  e: React.MouseEvent<HTMLElement>,
+  mouseX: MotionValue<number>   // ← this is the key change
+) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  mouseX.set((x - rect.width / 2) / 20);
 }
