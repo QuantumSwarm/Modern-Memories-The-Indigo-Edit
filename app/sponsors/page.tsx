@@ -1,5 +1,5 @@
 'use client'
-// test
+// test 1 2 3
 import { MotionValue, motion, useMotionValue, useTransform} from 'framer-motion'
 import { useState, useMemo, useEffect } from 'react'
 import Navbar from '@/components/sections/Navbar'
@@ -282,7 +282,7 @@ function SponsorCard({
 // Change this line:
 function handleMouseMove(
   e: React.MouseEvent<HTMLElement>,
-  mouseX: MotionValue<number>   // ← this is the key change
+  mouseX: MotionValue<number>   // ← this is the key change march 13
 ) {
   const rect = e.currentTarget.getBoundingClientRect();
   const x = e.clientX - rect.left;
